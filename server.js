@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
+require('dotenv').config({path: `.env.${app.get('env')}`});
 
 const mysql = require('mysql2');
 const cors = require('cors');
